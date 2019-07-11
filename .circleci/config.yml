@@ -2,11 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node@sha256
+      - image: circleci/golang:1.11-node
       - image: debian:stretch       
 
     steps:
       - checkout
+      - setup_remote_docker
 
       - run:
           name: Greeting
