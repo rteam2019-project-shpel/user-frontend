@@ -1,0 +1,23 @@
+{
+    "name": "user-frontend",
+    "version": "1.0.0",
+    "description": "User Frontend Files",
+    "main": "app.js",
+    "dependencies": {
+        "eslint": "^6.0.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rteam2019-project-shpel/user-frontend.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rteam2019-project-shpel/user-frontend/issues"
+    },
+    "homepage": "https://github.com/rteam2019-project-shpel/user-frontend#readme"
+}
