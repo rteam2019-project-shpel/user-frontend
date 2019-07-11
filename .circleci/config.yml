@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.11-node
-      - image: debain:stretch
+      - image: debian:stretch
       
       working_directory: ~/repo
 
