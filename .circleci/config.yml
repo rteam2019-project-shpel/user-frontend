@@ -7,8 +7,7 @@ jobs:
     working_directory: ~/code 
 
     steps:
-      - checkout    
-
+      - checkout
       - run:
           name: Greeting
           command: echo Hello, world.
@@ -33,7 +32,7 @@ jobs:
            fi
        - setup_remote_docker:
           docker_layer_caching: true
-      - run:
+       - run:
           name: Build and push Docker image
           command: |
            if [ $CIRCLE_BRANCH = 'staging' ] || [ $CIRCLE_BRANCH = 'master' ]; then
