@@ -4,14 +4,12 @@ jobs:
     docker:
       - image: circleci/golang:1.11-node
       - image: debian:stretch 
-    working_directory: ~/code 
-
+    
     steps:
       - checkout
       - run:
           name: Greeting
           command: echo Hello, world.
-
       - run:
           name: Print the Current Time
           command: date
