@@ -3,8 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.11-node
-      - image: debian:stretch 
-    working_directory: ~/rteam2019-project-shpel/user-frontend/.circleci
+      - image: debian:stretch    
     steps:
       - checkout
       - run:
