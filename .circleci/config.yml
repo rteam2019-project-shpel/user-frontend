@@ -33,7 +33,7 @@ jobs:
           name: Build and push Docker image
           command: |
            if [ $CIRCLE_BRANCH = 'staging' ] || [ $CIRCLE_BRANCH = 'master' ]; then
-           docker build -t $DOCKER_ORG/$IMAGE_NAME:$TAG --file ./Dockerfile
+           docker build -t $DOCKER_ORG/$IMAGE_NAME:$TAG -f ./Dockerfile
            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
            docker push $DOCKER_ORG/$IMAGE_NAME:$TAG
            fi
