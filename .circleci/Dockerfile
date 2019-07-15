@@ -1,7 +1,8 @@
-FROM node:10
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm ci --only=production
+FROM kong:latest
+WORKDIR /app
+COPY kong.yml ./
 COPY . .
-EXPOSE 2000
-CMD ["npm", "start"]
+EXPOSE 8000
+EXPOSE 8443
+EXPOSE 8001
+EXPOSE 8444

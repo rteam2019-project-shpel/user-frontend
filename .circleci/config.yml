@@ -2,25 +2,9 @@ version: 3.4
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.11-node
-      - image: debian:stretch
-    working_directory: ~/user-frontend
+      - image: ubuntu
     steps:
       - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
-      
-      - run:
-          name: npm-install
-          command: npm install
-          
-      - run:
-          name: npm-test
-          command: npm test
       - run:
           name: Setup Variables
           command: |
@@ -28,8 +12,6 @@ jobs:
            echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
            echo 'export IMAGE_NAME=${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}' >> $BASH_ENV
            fi
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           name: Build and push Docker image
           command: |
